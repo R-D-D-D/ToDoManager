@@ -1,5 +1,6 @@
 
-<%= form_with model: @task, local: true do |form| %>
+<div class="form">
+<%= form_with model: @task, local: true do |form|%>
 
   <% if @task.errors.any? %>
     <div id="error_explanation">
@@ -17,16 +18,16 @@
 
   <p>
     <%= form.label :deadline %><br>
-    <%= form.text_field :deadline %>
+    <%= form.text_field :deadline, class:'text' %>
   </p>
 
   <p>
     <%= form.label :task %><br>
-    <%= form.text_area :task %>
+    <%= form.text_area :task, class:'text', style:'height:80px' %>
   </p>
 
   <p>
-    <%= form.submit %>
+    <%= form.submit class:'button3'%>
   </p>
 <% end %>
-
+</div>

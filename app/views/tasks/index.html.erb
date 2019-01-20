@@ -1,7 +1,6 @@
 
 <h1>Listing tasks</h1>
 
-<%= link_to 'New Task', new_task_path %>
 <table>
   <tr>
     <th>Task</th>
@@ -11,13 +10,16 @@
 
   <% @tasks.each do |task| %>
     <tr>
-      <td><%= task.task %></td>
-      <td><%= task.deadline %></td>
-      <td><%= link_to 'Show', task_path(task) %></td>
-      <td><%= link_to 'Edit', edit_task_path(task) %></td>
-      <td><%= link_to 'Destroy', task_path(task),
+      <td width="60%"><%= task.task %></td>
+      <td width="20%"><%= task.deadline %></td>
+      <td><%= link_to 'Show', task_path(task), class: 'button'%></td>
+      <td><%= link_to 'Edit', edit_task_path(task), class: 'button' %></td>
+      <td><%= link_to 'Delete ', task_path(task),
                       method: :delete,
-                      data: { confirm: 'Are you sure?' } %></td>
+                      data: { confirm: 'Are you sure?' }, class: 'button' %></td>
     </tr>
   <% end %>
 </table>
+
+<%= link_to 'New Task', new_task_path, class: 'button', style: 'width: 60px; margin-top: 30px;' %>
+<%= link_to 'Home', root_path, class: 'button', style: 'width: 60px; margin-top: 30px;' %>

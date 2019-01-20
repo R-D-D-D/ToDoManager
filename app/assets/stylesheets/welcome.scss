@@ -1,3 +1,130 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background-image: url("background.jpeg");
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: white;
+}
+
+h1{
+  color:white;
+  font-size: 80px;
+  position: relative;
+  text-align: center;
+}
+
+.button {
+  background: gray;
+  border: 1px solid gray;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  margin: 2px 2px;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 10px;
+  text-align: center;
+  width: 40px;
+}
+
+.button:hover {
+  background: #FFF;
+  border: 1px solid gray;
+  color: gray;
+  animation: ease;
+}
+
+table {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 1000px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 auto;
+}
+
+td, th {  border: 0 none; height: 30px; }
+
+th {
+  /* Gradient Background */
+  background: linear-gradient(#333 0%,#444 100%);
+  color: #FFF; font-weight: bold;
+  height: 40px;
+}
+
+td { background: #FAFAFA; text-align: center; }
+
+/* Zebra Stripe Rows */
+
+tr:nth-child(even) td { background: #EEE; }
+tr:nth-child(odd) td { background: #FDFDFD; }
+
+/* First-child blank cells! */
+tr td:nth-child(3), tr th:nth-child(3) {
+  background: none;
+}
+
+tr td:nth-child(4), tr th:nth-child(4) {
+  background: none;
+}
+
+tr td:nth-child(5), tr th:nth-child(5) {
+  background: none;
+}
+/* Add border-radius to specific cells! */
+tr:first-child th:nth-child(1) {
+  border-radius: 5px 0 0 0;
+}
+
+tr:first-child th:nth-child(2) {
+  border-radius: 0 5px 0 0;
+}
+
+.button2 {
+  background: gray;
+  border: 1px solid gray;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px;
+  width: 300px;
+}
+
+.button2:hover {
+  background: #FFF;
+  border: 1px solid gray;
+  color: gray;
+  animation: ease;
+}
+
+
+.center{
+  display: inline-block;
+}
+
+.button3{
+  border: none;
+  padding: 8px 15px 8px 15px;
+  background: gray;
+  color: white;
+  box-shadow: 1px 1px 4px #DADADA;
+  -moz-box-shadow: 1px 1px 4px #DADADA;
+  -webkit-box-shadow: 1px 1px 4px #DADADA;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.button3:hover{
+  background: white;
+  color: gray;
+}
