@@ -1,19 +1,36 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+  font-family: 'Covered By Your Grace';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Covered By Your Grace'), local('CoveredByYourGrace'), url(https://fonts.gstatic.com/s/coveredbyyourgrace/v8/QGYwz-AZahWOJJI9kykWW9mD6opopoqXSOSEEQgsiaXVIw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwPIsWqZPANqczVs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 body{
   background-image: url("background.jpeg");
   background-size: cover;
   font-family: 'Raleway', sans-serif;
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 h1{
   color:white;
-  font-size: 80px;
+  font-size: 100px;
   position: relative;
   text-align: center;
+  font-family: 'Covered By Your Grace', sans-serif;
+  text-transform: uppercase;
 }
 
 .button {
@@ -45,6 +62,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   margin: 0 auto;
+
 }
 
 td, th {  border: 0 none; height: 30px; }
@@ -56,7 +74,7 @@ th {
   height: 40px;
 }
 
-td { background: #FAFAFA; text-align: center; }
+td { background: #FAFAFA; text-align: center; line-height:1.4;}
 
 /* Zebra Stripe Rows */
 
@@ -97,6 +115,8 @@ tr:first-child th:nth-child(2) {
   text-align: center;
   margin-top: 20px;
   width: 300px;
+  box-sizing: padding-box;
+  position: relative;
 }
 
 .button2:hover {
@@ -106,10 +126,6 @@ tr:first-child th:nth-child(2) {
   animation: ease;
 }
 
-
-.center{
-  display: inline-block;
-}
 
 .button3{
   border: none;

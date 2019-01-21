@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
 
+
   http_basic_authenticate_with name: "runding", password: "970610", except: [:index, :show]
 
   def index
