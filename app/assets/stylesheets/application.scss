@@ -1,0 +1,276 @@
+
+@import "bootstrap";
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+@font-face {
+    font-family: 'Covered By Your Grace';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Covered By Your Grace'), local('CoveredByYourGrace'), url(https://fonts.gstatic.com/s/coveredbyyourgrace/v8/QGYwz-AZahWOJJI9kykWW9mD6opopoqXSOSEEQgsiaXVIw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptrg8zYS_SKggPNwPIsWqZPANqczVs.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body{
+    margin-bottom: 40px;
+    font-family: 'Raleway', sans-serif;
+    background-image: url("background.jpeg");
+    background-size: cover;
+}
+
+h1{
+    color: white;
+    font-size: 100px;
+    position: relative;
+    text-align: center;
+    font-family: 'Covered By Your Grace', sans-serif;
+    text-transform: uppercase;
+}
+
+.welcome h1{
+    margin-top: 80px;
+}
+
+table {
+    color: #333;
+
+    width: 1000px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+td, th {  border: 0 none; height: 30px; }
+
+th {
+    /* Gradient Background */
+    background: linear-gradient(#333 0%,#444 100%);
+    color: #FFF; font-weight: bold;
+    height: 40px;
+}
+
+td { background: #FAFAFA;
+    text-align: center;
+    line-height:1.4;
+}
+
+/* Zebra Stripe Rows */
+
+tr:nth-child(even) td { background: #EEE; }
+tr:nth-child(odd) td { background: #FDFDFD; }
+
+/* First-child blank cells! */
+tr td:nth-child(3), tr th:nth-child(3) {
+    background: none;
+}
+
+tr td:nth-child(4), tr th:nth-child(4) {
+    background: none;
+}
+
+tr td:nth-child(5), tr th:nth-child(5) {
+    background: none;
+}
+/* Add border-radius to specific cells! */
+tr:first-child th:nth-child(1) {
+    border-radius: 5px 0 0 0;
+}
+
+tr:first-child th:nth-child(2) {
+    border-radius: 0 5px 0 0;
+}
+
+.text{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+    width: 200px;
+}
+
+
+.button {
+    background: gray;
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    margin: 2px 2px;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10px;
+    text-align: center;
+
+}
+
+.button:hover {
+    background: #FFF;
+    border: 1px solid gray;
+    color: gray;
+    animation: ease;
+    text-decoration: none;
+}
+
+
+.button2 {
+    background: gray;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    width: 300px;
+    box-sizing: padding-box;
+    position: relative;
+}
+
+.button2:hover {
+    background: #FFF;
+    border: 1px solid gray;
+    color: gray;
+    animation: ease;
+    text-decoration: none;
+}
+
+
+.submit{
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: gray;
+    color: white;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.submit:hover{
+    background: white;
+    color: gray;
+}
+
+
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: 0.5rem;
+}
+
+.card-signin {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+    padding: 2rem;
+}
+
+.form-signin {
+    width: 100%;
+}
+
+.form-signin .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-label-group input {
+    height: auto;
+    border-radius: 2rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::placeholder {
+    color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+    padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 12px;
+    color: #777;
+}
+

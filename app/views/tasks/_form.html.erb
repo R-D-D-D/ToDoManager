@@ -1,13 +1,16 @@
-
-<div class="form">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
 <%= form_with model: @task, local: true do |form|%>
 
   <% if @task.errors.any? %>
-    <div id="error_explanation">
-      <h2>
+    <div id="error_explanation" class="alert alert-danger">
+      <p>
         <%= pluralize(@task.errors.count, "error") %> prohibited
         this task from being saved:
-      </h2>
+      </p>
       <ul>
         <% @task.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -16,18 +19,22 @@
     </div>
   <% end %>
 
-  <p>
+  <div>
     <%= form.label :deadline %><br>
-    <%= form.text_field :deadline, class:'text' %>
-  </p>
-
-  <p>
+    <%= form.text_field :deadline, class: 'form-control' %>
+  </div>
+<br />
+  <div>
     <%= form.label :task %><br>
-    <%= form.text_area :task, class:'text', style:'height:80px' %>
-  </p>
+    <%= form.text_area :task, class:'text', class: 'form-control' %>
+  </div>
 
   <p>
-    <%= form.submit class:'button3'%>
+    <%= form.submit class:'submit', style: 'margin-top: 30px'%>
   </p>
 <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
