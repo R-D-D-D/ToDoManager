@@ -44,7 +44,6 @@ h1{
 
 table {
     color: #333;
-
     width: 1000px;
     border-collapse: collapse;
     border-spacing: 0;
@@ -66,13 +65,11 @@ td { background: #FAFAFA;
     line-height:1.4;
 }
 
-/* Zebra Stripe Rows */
-
 tr:nth-child(even) td { background: #EEE; }
 tr:nth-child(odd) td { background: #FDFDFD; }
 
-/* First-child blank cells! */
-tr td:nth-child(3), tr th:nth-child(3) {
+
+tr td:nth-child(6), tr th:nth-child(6) {
     background: none;
 }
 
@@ -83,12 +80,12 @@ tr td:nth-child(4), tr th:nth-child(4) {
 tr td:nth-child(5), tr th:nth-child(5) {
     background: none;
 }
-/* Add border-radius to specific cells! */
+
 tr:first-child th:nth-child(1) {
     border-radius: 5px 0 0 0;
 }
 
-tr:first-child th:nth-child(2) {
+tr:first-child th:nth-child(3) {
     border-radius: 0 5px 0 0;
 }
 
@@ -110,7 +107,7 @@ tr:first-child th:nth-child(2) {
 
 
 .button {
-    background: gray;
+      background: gray;
     border: 1px solid gray;
     border-radius: 3px;
     color: white;
@@ -191,7 +188,7 @@ tr:first-child th:nth-child(2) {
 
 .card-title {
     font-weight: 300;
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .card-signin .card-body {

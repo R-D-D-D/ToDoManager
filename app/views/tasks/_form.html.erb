@@ -28,8 +28,13 @@
     <%= form.label :task %><br>
     <%= form.text_area :task, class:'text', class: 'form-control' %>
   </div>
+            <br />
+            <div>
+            <%= form.label "Tags separate by commas" %><br>
+              <%= form.text_area :tag_list , class:'text', class: 'form-control' %>
+            </div>
 
-  <p>
+            <p>
     <%= form.submit class:'submit', style: 'margin-top: 30px'%>
   </p>
 <% end %>

@@ -1,17 +1,19 @@
 
 <h1>Listing tasks</h1>
 
+
 <table>
   <tr>
     <th>Task</th>
     <th>Deadline</th>
-    <th></th>
+    <th>Tags</th>
   </tr>
 
   <% @tasks.each do |task| %>
     <tr>
       <td width="60%"><%= task.task %></td>
       <td width="20%"><%= task.deadline %></td>
+      <td width="20%"><%= raw task.tag_list.map {|x| link_to x, tag_path(x)}.join(" ,")%></td>
       <td><%= link_to 'Show', task_path(task), class: 'button'%></td>
       <td><%= link_to 'Edit', edit_task_path(task), class: 'button' %></td>
       <td><%= link_to 'Delete ', task_path(task),
@@ -20,4 +22,5 @@
     </tr>
   <% end %>
 </table>
+
 

@@ -2,7 +2,11 @@ class TasksController < ApplicationController
 
 
   def index
-    @tasks = current_user.tasks
+    if params[:tag]
+      @tasks = current_user.tasks.tagged_with(params[:tag])
+      else
+    @tasks = current_user.tasks.search(params[:search])
+    end
   end
 
   def show
@@ -46,6 +50,6 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:deadline, :task)
+    params.require(:task).permit(:deadline, :task, :tag_list)
   end
 end
