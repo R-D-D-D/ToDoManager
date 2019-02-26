@@ -17,7 +17,3 @@ module ToDoList
     # the framework and any gems in your application.
   end
 end
-
-config.assets.initialize_on_precompile = false
-
-config.serve_static_assets = true
